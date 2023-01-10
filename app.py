@@ -1,3 +1,20 @@
+# from flask import Flask
+
+# app = Flask(__name__)
+
+# @app.route("/")
+# def hello_world():
+#     return "<p>Hello, World!</p>"
+
+# if __name__ == "__main__":
+#     app.run(debug=True)
+
+# Student Database Management(DataDose)
+# College: Shah and Anchor Kutchhi Engineering College
+# Batch: 2020-2021 SEM 3
+# Class: SE - 13
+# Members: Dimple Rathod, Farhat Shaikh, Jinay Vora, Rohit Wahwal
+# A Project by SIMP group
 
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL
