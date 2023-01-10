@@ -25,7 +25,7 @@ import os
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__, static_url_path='/static')
-app.secret_key = "7534291534"
+app.secret_key = "6534291734"
 
 #Upload Config
 UPLOAD_FOLDER = 'static/uploads/'
