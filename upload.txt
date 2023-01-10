@@ -1,0 +1,39 @@
+#upload SSC Marksheet
+                ssc_marksheet = request.files['ssc_marksheet']
+
+                if ssc_marksheet and allowed_file(ssc_marksheet.filename):
+                    reg_id = request.form['reg_id']
+                    filename = secure_filename(ssc_marksheet.filename)
+                    basedir = os.path.abspath(os.path.dirname(__file__))
+                    ssc_marksheet.save(os.path.join(basedir, app.config['UPLOAD_FOLDER'], filename))
+                #upload HSC Marksheet
+                hsc_marksheet = request.files['hsc_marksheet']
+
+                if hsc_marksheet and allowed_file(hsc_marksheet.filename):
+                    reg_id = request.form['reg_id']
+                    filename = secure_filename(hsc_marksheet.filename)
+                    basedir = os.path.abspath(os.path.dirname(__file__))
+                    hsc_marksheet.save(os.path.join(basedir, app.config['UPLOAD_FOLDER'], filename))
+                #upload Leaving Certificate
+                leaving_certificate = request.files['leaving_certificate']
+
+                if leaving_certificate and allowed_file(leaving_certificate.filename):
+                    reg_id = request.form['reg_id']
+                    filename = secure_filename(leaving_certificate.filename)
+                    basedir = os.path.abspath(os.path.dirname(__file__))
+                    leaving_certificate.save(os.path.join(basedir, app.config['UPLOAD_FOLDER'], filename))
+                #upload Photosign
+                photosign = request.files['photosign']
+
+                if photosign and allowed_file(photosign.filename):
+                    reg_id = request.form['reg_id']
+                    filename = secure_filename(photosign.filename)
+                    basedir = os.path.abspath(os.path.dirname(__file__))
+                    photosign.save(os.path.join(basedir, app.config['UPLOAD_FOLDER'], filename))
+                        
+                    
+
+                    
+                submitcur = db.connection.cursor(MySQLdb.cursors.DictCursor)
+                submitcur.execute("INSERT INTO simp.studentdetails(reg_id, f_name, l_name, father_name, mother_name, dob, gender, address, phone_no, branch, roll_no, aadhar_card, ssc_marksheet, hsc_marksheet, leaving_certificate, photosign)VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",(reg_id, fname, lname, f_name, m_name, date_of_birth, gender, address, phone_number, branch, roll_number, filename))
+                db.connection.commit()

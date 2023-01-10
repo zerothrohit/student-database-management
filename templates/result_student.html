@@ -1,0 +1,99 @@
+<html lan="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Student Portal</title>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<link rel="stylesheet" href="../static/style1.css"> 
+    <style> 
+		input[type=submit]{
+		  background: none;
+		  font-size:17px;
+		  cursor: pointer;
+		}
+        input[type=reset]{
+		  background: none;
+		  font-size:17px;
+		  cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+		<div class="wrapper">
+			<div class="sidebar">
+                <form action = "/new/logout">
+				<p style="color: rgb(255, 255, 255); top: 1px; font-size: 18px;">Welcome, {{username}}</p>
+				<h2>Student Portal</h2>
+				<ul>
+					<li><a href="{{url_for('profile_student')}}"><i class="fas fa-plus"></i>Student Details</a></li>
+					<li class="active"><a href="{{url_for('result_student')}}"><i class="fas fa-poll"></i>Result</a></li>
+					<li><a href="{{url_for('course_student')}}"><i class="fas fa-bookmark"></i>Course</a></li>
+					<li><a href="{{url_for('routine_student')}}"><i class="fas fa-calendar-alt"></i>Routine</a></li>
+                    <li><input type="submit" name= "logout" value="Logout" class="btn"></i></li>
+				</ul>
+                </form>
+                </div>
+				</div>
+                <header>
+              
+					<main>
+						<form action="" method="post">
+				
+				
+							<div class="register1">         
+								
+						<h1>Result</h1>
+				<hr><br>
+						   
+				<p>Registration Id: <label name="ep1_ia1" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 10px;">{{data.0}}</label></p><br>
+				<p>Attendance: <label  name="ep1_ia1" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 5px;">{{data.22}}</label></p><br>  
+				<p>Status: <label  name="ep1_ia1" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 10px;">{{data.23}}</label></p><br>    
+				<div class="grid-container1">
+						 <div class="ia1">
+							 <h3>IA1</h3><hr><br>
+						 <p>EP1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.1}}</label></p><br>
+						 <p>EC1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.2}}</label></p><br>
+						 <p>EM1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.3}}</label></p><br>
+						 <p>EM:  <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.4}}</label></p><br>
+						<p>BEE:  <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.5}}</label></p><br>
+					</div>
+					<div class="ia2">
+						<h3>IA2</h3><hr><br>
+						<p>EP-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.6}}</label></p><br>
+						<p>EC-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.7}}</label></p><br>
+						<p>EM-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.8}}</label></p><br>
+						<p>EM: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.9}}</label></p><br>
+						<p>BEE: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.10}}</label></p><br>
+					</div>
+					<div class="ia2">
+						<h3>Term-Work</h3><hr><br>
+						<p>EP-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.11}}</label></p><br>
+						<p>EC-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.12}}</label></p><br>
+						<p>EM-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.13}}</label></p><br>
+						<p>EM: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.14}}</label></p><br>
+						<p>BEE: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.15}}</label></p><br>
+						
+					</div>
+						<div class="ia2">
+							<h3>SEM1</h3><hr><br>
+						<p>EP-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.16}}</label></p><br>
+						<p>EC-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.17}}</label></p><br>
+						<p>EM-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.18}}</label></p><br>
+						<p>EM: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.19}}</label></p><br>
+						<p>BEE: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.20}}</label></p><br>
+						<p>SEM-1: <label  name="ep1_ia1" class="label" style="background-color: transparent; color: white; border: 2px solid white; border-radius: 5px; padding: 5px 15px;">{{data.21}}</label></p>
+					
+					</div>
+					</div>	
+					<hr>								
+						</form>
+
+					</div>
+					</div>
+				
+				   
+					</main>
+				
+				</header>
+           
+</body>
+</html>
