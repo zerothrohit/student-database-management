@@ -1,6 +1,6 @@
 # Data Dose - A Student Database Management 👩🏼‍🎓
 
-This is a part of our SEM 3 Mini Project for Second Year Engineering and is purely team work 🤝.
+This is a part of our SEM 3 Mini Project for Second Year Engineering and is purely team work!
 
 ## Problem Statement:
 
@@ -8,7 +8,7 @@ The Digital India campaign* paved way for a surge in web development. It revampe
 
 Student Database Management Web application tackles all problems mentioned above catering to needs of the modern times. It allows students and teachers to share confidential data such as personal information and exam results in a proficient manner. Hence, all the data can be easily accessed by the teachers and the students with relative convenience.
 
-*The project was developed in COVID Outbreak🦠
+The project was developed in COVID Outbreak🦠
 
 ## Tech Stack
 * HTML
